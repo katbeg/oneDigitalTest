@@ -8,18 +8,22 @@ function fizzbuzz(){
 }
 
 function newRandom(nums, percentage){
-    
+            let res = [];
+
+            for(let i = 0; i < nums.length; i++){
+                let counter = 0;
+                let n = percentage[i]/10;
+                do{
+                    res.push(nums[i]);
+                    counter++;
+                }while(counter < n);
+            }
+
+            let randomIndex = Math.floor(Math.random() * res.length);
+            console.log(res[randomIndex]);
 }
 
 function sum(arr){
-    // for(let i=0; i < arr.length; i++){
-    //     for(let k = i+1; k < arr.length; k++){
-    //         if(arr[i] + arr[k] === 10){
-    //             console.log(i, k);
-    //         }
-    //     }
-    // }
-
     for(let i=0; i < arr.length; i++){
         let res = [];
         let k = 10 - arr[i];
